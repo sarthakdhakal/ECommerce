@@ -1,0 +1,68 @@
+﻿@model ECommerce.Models.ProductViewModel
+
+@{
+    ViewBag.Title = "Add Product";
+
+}
+@using (Html.BeginForm("AddProduct",
+     "Product",
+    FormMethod.Post,
+     new { enctype = "multipart/form-data" }))
+ {
+@* <form id="AddProduct" enctype = "multipart/form-data"> *@
+    <div class="row">
+        <div class="col-4">
+            @* @Html.DisplayFor(model => model.ProductName,) *@
+            <label>Product Name</label>
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(model => model.ProductName, new { @class = "form-control", @placeholder = "Product Name" });
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            @* @Html.DisplayFor(model => model.ProductPrice); *@
+                    <label>Product Price</label>
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(model => model.ProductPrice, new { @class = "form-control", @placeholder = "Product Price" });
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            @* @Html.DisplayFor(model => model.ProductQuantity); *@
+            <label>Product Quantity</label>
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(model => model.ProductQuantity, new { @class = "form-control", @placeholder = "Product Quantity" });
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label>Choose a image</label>
+        </div>
+        <div class="col-8">
+            <input type="file" name="file" id="file"/>
+        </div>
+    </div>
+<input type="submit" value="Add Product" class="btn btn-success-md"/>
+// </form>
+}
+@* <script> *@
+@*   $(document).ready(function (){ *@
+@*         $("#btnSubmit").click(function (){ *@
+@*             var data = $("#AddEditForm").serialize(); *@
+@*             $.ajax({ *@
+@*                 type: "POST", *@
+@*                 url: "/Employee/AddEdit", *@
+@*                 data: data, *@
+@*                 success: function (){ *@
+@*                     $("#myModal1").modal("hide"); *@
+@*                     alert("The task was successfully performed"); *@
+@*                window.location.href ="Employee/Index"; *@
+@*                 } *@
+@*             }) *@
+@*         })}) *@
+@* </script> *@

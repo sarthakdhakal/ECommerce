@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce_asp.net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthakdhakal/ECommerce_ASP.NET.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sarthakdhakal/ECommerce_ASP.NET/issues"
+  },
+  "homepage": "https://github.com/sarthakdhakal/ECommerce_ASP.NET#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "jquery": "3.4.1",
+    "jquery-validation": "^1.19.3",
+    "modernizr": "^3.11.8",
+    "sugamkarki": "^1.0.0"
+  }
+}
