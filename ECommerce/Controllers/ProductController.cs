@@ -65,10 +65,7 @@ namespace ECommerce.Controllers
         {
             List<Category> categories = db.Categories.ToList();
             ViewBag.CategoryList = new SelectList(categories,"CategoryId","CategoryName");
-<<<<<<< HEAD
-          
-=======
->>>>>>> master
+
             return View();
         }
 
