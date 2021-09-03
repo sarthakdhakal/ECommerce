@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿@model IEnumerable<ECommerce.Models.DisplayViewModel>
+@model IEnumerable<ECommerce.Models.DisplayViewModel>
 
 @{
     ViewBag.Title = "Product page";
@@ -8,6 +7,7 @@
 <div class="row pb-3">
     <div class="col-8">
         <h3>
+
             <strong>Products</strong>
         </h3>
     </div>
@@ -15,52 +15,28 @@
 <div class="row px-4">
     @foreach (var item in Model)
     {
-    <div class="col-12 col
+        <div class="col-12 col
              -md-6 col-lg-3 ">
-        <div class="card">
-            <img alt="" class="card-img-top" src="@item.ImagePath">
-            <div class="card-header">
-                <h3>Name: @item.ProductName </h3>
+            <div class="card">
+                @foreach (var item2 in item.ImageViewModelsList)
+                {
+                    <img class="card-img-top" src="@item2.ImagePath" alt="Unsplash">
+                }
+                <div class="card-header">
+
+                    <h3>Name: @item.ProductName </h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Price : @item.ProductPrice</p>
+                </div>
+                <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-primary btn-md" id="DetailsBtn()" type="button">Learn More</a>
+                </div>
             </div>
-            <div class="card-body">
-                <p class="card-text">Price : @item.ProductPrice</p>
-            </div>
-            <div class="d-grid gap-2">
-                <a href="#" class="btn btn-primary btn-md" id="DetailsBtn()" type="button">Learn More</a>
-            </div>
+
+
         </div>
-        @foreach (var item2 in item.ImageViewModelsList)
-        { 
-            <div>
-
-            <img alt="" class="card-img-top" src="@item2.ImagePath">
-            </div>
-
-
-        }
-    </div>
     }
 
-</div>
-=======
-﻿@model IEnumerable<ECommerce.Models.ProductViewModel>
 
-@{
-    ViewBag.Title = "Products";
-}
-
-<div class="row">
-    <div class="col-8">
-        <h3><strong> Products of your choice</strong></h3>
-    </div>
-    <div class="col-4">
-        <a href="" id="AddNewProduct" class="btn btn-primary" >Add New Product</a>
-    </div>
-    
 </div>
-<div>
-    <table class="t"> 
-        
-    </table>
-</div>
->>>>>>> master

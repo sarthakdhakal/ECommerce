@@ -10,7 +10,8 @@ namespace ECommerce.Models
         
         public Nullable<int> ProductPrice { get; set; }
         public Nullable<int> ProductQuantity { get; set; }
-        
+        public string CategoryName { get; set; }
+                
         public virtual ICollection<ProductImage> ProductImages { get; set; }
     }
 }
